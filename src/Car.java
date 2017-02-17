@@ -1,3 +1,5 @@
+import java.text.NumberFormat;
+
 /**
  * Created by anthonymparker on 2/16/17.
  */
@@ -60,9 +62,10 @@ public class Car {
         this.price = price;
     }
 
+    NumberFormat nf = NumberFormat.getCurrencyInstance();
 
     public String toString(){
-        return  "\n" + make + "\t" + model + "\t" + year + "\t" + "$" + (price);
+        return  "\n" + make + "\t" + model + "\t" + year + "\t"  + (nf.format(price));
 
     }
 }
